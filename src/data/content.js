@@ -189,13 +189,13 @@ export const blogs = [
   {
     title: 'Prerequisites for Neural Network and Deep Learning',
     date: 'Aug 27, 2025',
-    link: 'https://bit.ly/',
+    link: 'https://medium.com/@nageshgupta0806/prerequisite-of-neural-network-and-deep-learning-856f2257b526',
     image: 'images/blog1.png',
   },
   {
     title: 'Understanding Convolutional Neural Networks',
     date: 'Sep 15, 2025',
-    link: 'https://bit.ly/',
+    link: 'https://medium.com/@nageshgupta0806/understanding-convolutional-neural-networks-1234567890',
     image: '',
   },
   

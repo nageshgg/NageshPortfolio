@@ -15,7 +15,7 @@ const ServiceList = ({ items }) => (
 const TextRunningSection = () => (
   <section className="text-running-way-sec">
     <div className="text-desc">
-      <p className="mobile-text-center">“Eat. Excercise. Sleep. Code. Repeat”</p>
+      <p className="mobile-text-center">“Excercise. Eat. Code. Sleep. Repeat.”</p>
     </div>
     <div className="text-running-way-left text-running-way">
       <div className="text-row">
