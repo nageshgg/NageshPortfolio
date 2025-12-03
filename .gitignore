@@ -1,0 +1,9 @@
+images/.DS_Store
+images/icon/.DS_Store
+images/.DS_Store
+node_modules/
+dist/
+.env
+.vscode/
+.DS_Store
+public/fonts/
