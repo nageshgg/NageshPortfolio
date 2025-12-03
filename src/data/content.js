@@ -2,7 +2,6 @@ export const navLinks = [
   { label: 'About', target: 'about' },
   { label: 'Experience', target: 'experience' },
   { label: 'Projects', target: 'portfolio' },
-  { label: 'Publications', target: 'publications' },
   { label: 'Blogs', target: 'blogs' },
   { label: 'Education', target: 'education' },
   { label: 'Contact', target: 'contact' },
@@ -53,17 +52,12 @@ export const mobileProgrammingLanguages = [
 ];
 
 export const mobileTools = [
-  { alt: 'Flask', src: '/images/icon/flask.png' },
-  { alt: 'Tornado', src: '/images/icon/tornado.webp' },
   { alt: 'NodeJS', src: '/images/icon/node.png' },
   { alt: 'ReactJS', src: '/images/icon/react.png' },
   { alt: 'AngularJS', src: '/images/icon/angular.png' },
   { alt: 'MongoDB', src: '/images/icon/mongodb.png' },
-  { alt: 'React Native', src: '/images/icon/reactnative.webp' },
   { alt: 'MySQL', src: '/images/icon/mysql.webp' },
-  { alt: 'SQLite3', src: '/images/icon/sqlite3.png' },
   { alt: 'AWS', src: '/images/icon/aws.png' },
-  { alt: 'Terraform', src: '/images/icon/terraform.svg' },
 ];
 
 export const marqueeSkillsLeft = [
@@ -153,20 +147,20 @@ export const projects = [
   },
   {
     title: 'Loan Approval System',
-    link: 'https://github.com/nageshgg/DOC-QUERY',
-    image: '/images/docQ.jpeg',
+    link: 'https://github.com/nageshgg/Loan-Approval-System',
+    image: '/images/LoanAproval.png',
     stack: 'Python, LLM, RAG, GenAI, Laingchain, Huggingface, React Js',
     summary: 'Quering the Reasearch Paper using RAG and LLM',
   },{
     title: 'Crick Vision',
-    link: 'https://github.com/nageshgg/DOC-QUERY',
-    image: '/images/docQ.jpeg',
+    link: 'https://github.com/nageshgg/CricketVision',
+    image: '/images/crickvision.png',
     stack: 'Python, LLM, RAG, GenAI, Laingchain, Huggingface, React Js',
     summary: 'Quering the Reasearch Paper using RAG and LLM',
   },{
     title: 'Churn Prediction',
-    link: 'https://github.com/nageshgg/DOC-QUERY',
-    image: '/images/docQ.jpeg',
+    link: 'https://github.com/nageshgg/customer-churn-prediction',
+    image: '/images/churnprediction.png',
     stack: 'Python, LLM, RAG, GenAI, Laingchain, Huggingface, React Js',
     summary: 'Quering the Reasearch Paper using RAG and LLM',
   },
@@ -196,11 +190,11 @@ export const blogs = [
     title: 'Prerequisites for Neural Network and Deep Learning',
     date: 'Aug 27, 2025',
     link: 'https://bit.ly/',
-    image: '',
+    image: 'images/blog1.png',
   },
   {
-    title: 'Prerequisites for Neural Network and Deep Learning',
-    date: 'Aug 27, 2025',
+    title: 'Understanding Convolutional Neural Networks',
+    date: 'Sep 15, 2025',
     link: 'https://bit.ly/',
     image: '',
   },
