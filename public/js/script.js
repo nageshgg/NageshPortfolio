@@ -858,9 +858,7 @@ function initializeLegacyScripts() {
     class Process {
         constructor() {
             thatProcess = this;
-            thatProcess.scrollProcess = $(".process-section").first();
-            thatProcess.top = thatProcess.scrollProcess.offset().top;
-            thatProcess.height = thatProcess.scrollProcess.outerHeight();
+            thatProcess.updateMeasurements();
             thatProcess.init();
         }
 
@@ -873,83 +871,96 @@ function initializeLegacyScripts() {
             $(".single-process .next-step").on("click", thatProcess.scrollStepByStep);
         }
 
-        windowScroll() {
-            var howMuchScroll = $(window).scrollTop() + window.innerHeight / 2;
-            if (window.innerWidth > 768) {
-                if (howMuchScroll >= thatProcess.top && howMuchScroll < thatProcess.top + thatProcess.height * 0.1) {
-                    thatProcess.controlClass(true, "Explore my<br>education<br>journey now", false, true);
-                } else if (howMuchScroll >= thatProcess.top + thatProcess.height * 0.1 && howMuchScroll < thatProcess.top + thatProcess.height * 0.34) {
-                    thatProcess.controlClass(false, false, "1");
-                    $(".process-section .process-1").addClass("current").siblings().removeClass("current");
-                } else if (howMuchScroll >= thatProcess.top + thatProcess.height * 0.34 && howMuchScroll < thatProcess.top + thatProcess.height * 0.5) {
-                    thatProcess.controlClass(false, false, "2");
-                    $(".process-section .process-2").addClass("current").siblings().removeClass("current");
-                } else if (howMuchScroll >= thatProcess.top + thatProcess.height * 0.5 && howMuchScroll < thatProcess.top + thatProcess.height * 0.66) {
-                    thatProcess.controlClass(false, false, "3");
-                    $(".process-section .process-3").addClass("current").siblings().removeClass("current");
-                // } else if (howMuchScroll >= thatProcess.top + thatProcess.height * 0.66 && howMuchScroll < thatProcess.top + thatProcess.height * 0.9) {
-                //     thatProcess.controlClass(false, false, "4");
-                //     $(".process-section .process-4").addClass("current").siblings().removeClass("current");
-                } else if (howMuchScroll >= thatProcess.top + thatProcess.height * 0.5) {
-                    thatProcess.controlClass(true, "Learning never stops!", false);
-                }
-            } else {
-                if (howMuchScroll >= thatProcess.top + thatProcess.height * 0.05 && howMuchScroll < thatProcess.top + thatProcess.height * 0.315) {
-                    thatProcess.controlClass(false, false, "1");
-                    $(".process-section .process-1").addClass("current").siblings().removeClass("current");
-                } else if (howMuchScroll >= thatProcess.top + thatProcess.height * 0.315 && howMuchScroll < thatProcess.top + thatProcess.height * 0.5) {
-                    thatProcess.controlClass(false, false, "2");
-                    $(".process-section .process-2").addClass("current").siblings().removeClass("current");
-                } else if (howMuchScroll >= thatProcess.top + thatProcess.height * 0.5 && howMuchScroll < thatProcess.top + thatProcess.height * 0.685) {
-                    thatProcess.controlClass(false, false, "3");
-                    $(".process-section .process-3").addClass("current").siblings().removeClass("current");
-                // } else if (howMuchScroll >= thatProcess.top + thatProcess.height * 0.685 && howMuchScroll < thatProcess.top + thatProcess.height * 0.95) {
-                //     thatProcess.controlClass(false, false, "4");
-                //     $(".process-section .process-4").addClass("current").siblings().removeClass("current");
-                }
-            }
-        }
-
-        windowResize() {
+        updateMeasurements() {
             thatProcess.scrollProcess = $(".process-section").first();
+            thatProcess.steps = $(".process-section .single-process");
+            thatProcess.circle = $(".process-section .circle");
             thatProcess.top = thatProcess.scrollProcess.offset().top;
             thatProcess.height = thatProcess.scrollProcess.outerHeight();
         }
 
+        windowScroll() {
+            var howMuchScroll = $(window).scrollTop() + window.innerHeight / 2;
+            var firstStep = thatProcess.steps.first();
+            var lastStep = thatProcess.steps.last();
+
+            if (!firstStep.length || !lastStep.length) {
+                return;
+            }
+
+            var firstTop = firstStep.offset().top;
+            var lastBottom = lastStep.offset().top + lastStep.outerHeight();
+
+            if (howMuchScroll < firstTop) {
+                thatProcess.controlClass(true, "Explore my<br>education<br>journey now", false, true);
+                return;
+            }
+
+            if (howMuchScroll > lastBottom) {
+                thatProcess.controlClass(true, "Learning never stops!", false);
+                return;
+            }
+
+            var closestIndex = 0;
+            var minDiff = Number.POSITIVE_INFINITY;
+            thatProcess.steps.each(function (idx, el) {
+                var $el = $(el);
+                var center = $el.offset().top + $el.outerHeight() / 2;
+                var diff = Math.abs(howMuchScroll - center);
+                if (diff < minDiff) {
+                    minDiff = diff;
+                    closestIndex = idx;
+                }
+            });
+
+            thatProcess.steps.removeClass("current");
+            thatProcess.steps.eq(closestIndex).addClass("current");
+            thatProcess.controlClass(false, false, (closestIndex + 1).toString());
+        }
+
+        windowResize() {
+            thatProcess.updateMeasurements();
+        }
+
         controlClass(flag, text, number, down) {
+            var $circle = thatProcess.circle;
             if (flag) {
-                $(".process-section .circle").removeClass("small");
-                $(".process-section .single-process").removeClass("current");
+                $circle.removeClass("small");
+                thatProcess.steps.removeClass("current");
             } else {
-                $(".process-section .circle").addClass("small");
+                $circle.addClass("small");
             }
             if (text) {
-                $(".process-section .circle").children(".circle-content").children("p.text").html(text);
+                $circle.children(".circle-content").children("p.text").html(text);
             }
             if (number) {
-                $(".process-section .circle").children(".circle-content").children("p.number").html(number);
+                $circle.children(".circle-content").children("p.number").html(number);
             }
             if (down) {
-                $(".process-section .circle").addClass("down-btn");
+                $circle.addClass("down-btn");
             } else {
-                $(".process-section .circle").removeClass("down-btn");
+                $circle.removeClass("down-btn");
             }
         }
 
         scrollToStep() {
-            var goTo = thatProcess.top + (thatProcess.height * 0.26) - (window.innerHeight / 2);
+            var firstStep = thatProcess.steps.first();
+            if (!firstStep.length) {
+                return;
+            }
+            var goTo = firstStep.offset().top + (firstStep.outerHeight() / 2) - (window.innerHeight / 2);
             $("body, html").stop().animate({
                 scrollTop: goTo
             }, 750);
         }
         scrollStepByStep() {
             var target = $(this).attr("data-target");
-            if (window.innerWidth > 768) {
-                var ratio = 0.261 + 0.16 * target;
-            } else {
-                var ratio = 0.173 + 0.193 * target;
+            var targetIndex = parseInt(target, 10) - 1;
+            var targetStep = thatProcess.steps.eq(targetIndex);
+            if (!targetStep.length) {
+                return;
             }
-            var goTo = thatProcess.top + (thatProcess.height * ratio) - (window.innerHeight / 2);
+            var goTo = targetStep.offset().top + (targetStep.outerHeight() / 2) - (window.innerHeight / 2);
             $("body, html").stop().animate({
                 scrollTop: goTo
             }, 750);
