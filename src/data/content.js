@@ -13,6 +13,18 @@ export const heroContent = {
   title: 'Data Scientist / AI ML Engineer',
   tagline: 'Stay Hungry, Stay Foolish',
   buttonLabel: 'Hello 👋',
+  download_Resume: 'Download Resume',
+};
+
+export const resumeContent = {
+  showDownload: true,
+  eyebrow: 'Resume',
+  heading: 'Download my latest resume',
+  file: '/resume/nagesh-gupta-resume.pdf',
+  fileLabel: 'Download Resume (PDF)',
+  updated: 'Dec 2025',
+  fileSize: '355 KB',
+  
 };
 
 export const topSocialLinks = [

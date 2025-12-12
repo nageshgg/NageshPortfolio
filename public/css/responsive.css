@@ -151,6 +151,29 @@
         opacity: 1;
     }
 
+    .top-nav .mobile-bottom-contact .mobile-resume-cta {
+        margin: 25px 0 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .top-nav .mobile-bottom-contact .mobile-resume-cta a {
+        display: inline-block;
+        background-color: #FEE2BE;
+        color: #000000;
+        padding: 12px 22px;
+        border-radius: 18px;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .top-nav .mobile-bottom-contact .mobile-resume-cta a:hover {
+        background-color: #fda740;
+        color: #ffffff;
+    }
+
     .publication-section .left-publication-text h3 {
         font-size: 60px;
     }
