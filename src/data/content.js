@@ -61,25 +61,34 @@ export const mobileTools = [
 ];
 
 export const marqueeSkillsLeft = [
-  'Python',
+  'React.js',
   'JavaScript',
-  'HTML',
-  'CSS',
-  'C++',
-  'Java',
   'SQL',
+  'NoSQL',
+  'FastAPI',
+  'GIT',
+  'Python',
+  'MySQL',
+  'PostgreSQL',
+  'DOCKER',
 ];
 
 export const marqueeSkillsRight = [
-  'FastAPI',
-  'React.js',
-  'Angular',
-  'MongoDB',
-  'MySQL',
-  'AI',
+
+  
+  
+  'Numpy',
+  'Pandas',
+  'Scikit-learn',
+  'Azure',
+  'Tesseract',
+  'Huggingface',
+  'Pytorch',
   'ML',
   'NLP',
-  'Git',
+  'LLM',
+  'OpenCV',
+  'Computer Vision'
 ];
 
 export const aboutContent = {
@@ -93,17 +102,18 @@ export const aboutContent = {
 };
 
 const dxcDescription = [
-  'As a Data Scientist at DXC Technology, I led a team of 4 members to develop and deploy a Employee Migration tool that utilized machine learning algorithms to predict employee attrition and migration patterns.',
-  'This tool helped the organization to proactively manage its workforce and reduce attrition rates.',
+  'As a Data Scientist at DXC Technology, I led the development and deployment of a Global Employee Relocation Cost Savings Prediction tool that leveraged machine learning to forecast potential cost benefits from international employee transfers',
+  'This solution replaced manual Excel-based workflows and enabled HR and finance teams to simulate and compare relocation scenarios in real time, improving planning accuracy by 27% and reducing manual analysis time by over 60%.',
 ];
 
 const lentraDescription = [
-  'As a Software Engineer/ Data Analyst at Lentra AI, I had the exciting opportunity to delve into the fintech domain, specifically',
-  'A significant aspect of my role involved creating SQL-based analytical content. This content revolved around analyzing and visualizing Reach, Retention, and Revenue metrics that were relevant to businesses operating in the blockchain space.',
+  'As an ML/Software Engineer at Lentra, I contributed to the development of LaviOsa, a loan origination system used by banks to streamline home and auto loan processing.',
+  'A significant aspect of my role involved cimplemented OCR-based document parsing using Tesseract and OpenCV to extract PAN card details with 88% precision, reducing manual data entry for KYC verification. I also developed Angular and React-based onboarding flows and integrated backend Python services with CIBIL and identity verification APIs. Additionally, I engineered a deduplication workflow to identify and prefill prior applications, cutting duplicate submissions by 40% and improving data consistency across the system.',
 ];
 
 const SpeedNetworkNow = [
-  'As an intern at Speed Network Now, I worked on an AI culling software that is designed to help photographers cull their images automatically. '
+  'As an AI Automation Intern, I work on streamlining outreach and lead engagement processes automation tools.',
+  'My responsibilities include building, optimizing, and maintaining smart workflows for event marketing and sales teams. I use platforms like n8n to automate end-to-end operations — from lead collection and enrichment to campaign tracking — and tools like Smartlead to drive personalized, sequenced communication at scale.'
   ];
 
 
@@ -113,10 +123,10 @@ export const experiencesPrimary = [
     date: 'Nov 2025 - Present',
     location: 'London, United Kingdom',
     company: 'Speed Network Now',
-    role: 'AI Automation',
+    role: 'AI Automation (Intern)',
     description: SpeedNetworkNow,
     techStack:
-      'Python, Flask, Lua, Node.js, ReactJS, AngularJS, ElectronJS, JavaScript, TypeScript, HTML5, CSS, Computer Vision, Google Cloud Platform (GCP), Microsoft Azure, Machine Learning, MongoDB, Ruby on Rails',
+      'LLM, Python, smartlead, n8n, Zapier, ZOHO CRM',
   },
   {
     date: 'March 2022 - September 2023',
@@ -124,15 +134,15 @@ export const experiencesPrimary = [
     company: 'DXC Technology.',
     role: 'Data Scientist',
     description: dxcDescription,
-    techStack: 'Python, React, TypeScript, Machine Learning, Azure, SQL, Power BI, Tableau, Docker',
+    techStack: 'Python, SQL, Machine Learning, XGBoost, scikit-learn, NumPy, pandas, Azure Functions, Cosmos DB, Azure Blob Storage, Docker, FastAPI, Docker, Postman, Git',
   },
   {
     date: 'July 2020 - March 2022',
-    location: '',
+    location: 'Pune , India',
     company: 'Lentra AI',
     role: 'Software Engineer/ Data Analyst',
     description: lentraDescription,
-    techStack: 'Machine Learning, Python, Java, React, Angular, SQL, HTML, CSS, Data Analysis',
+    techStack: 'Machine Learning, Data Analysis, Tesseract, OpenCV, Python, JavaScript, React, SQL, HTML, CSS, Git',
   },
   
 ];
@@ -149,20 +159,20 @@ export const projects = [
     title: 'Loan Approval System',
     link: 'https://github.com/nageshgg/Loan-Approval-System',
     image: '/images/LoanAproval.png',
-    stack: 'Python, LLM, RAG, GenAI, Laingchain, Huggingface, React Js',
-    summary: 'Quering the Reasearch Paper using RAG and LLM',
+    stack: 'Python, Pandas, Scikit-learn, XGBoost, Random Forest Classifier, Decision Tree Classifier, FastAPI, Docker',
+    summary: 'Predicting Loan Approval using Machine Learning Algorithms',
   },{
     title: 'Crick Vision',
     link: 'https://github.com/nageshgg/CricketVision',
     image: '/images/crickvision.png',
-    stack: 'Python, LLM, RAG, GenAI, Laingchain, Huggingface, React Js',
-    summary: 'Quering the Reasearch Paper using RAG and LLM',
+    stack: 'OpenCV, YOLOv5, python, Roboflow, Jupyter Notebook',
+    summary: 'Analysing cricket game using Object Detection and Computer Vision',
   },{
     title: 'Churn Prediction',
     link: 'https://github.com/nageshgg/customer-churn-prediction',
     image: '/images/churnprediction.png',
-    stack: 'Python, LLM, RAG, GenAI, Laingchain, Huggingface, React Js',
-    summary: 'Quering the Reasearch Paper using RAG and LLM',
+    stack: 'Python (Pandas, Scikit-learn, Matplotlib, Joblib), Machine Learning Algorithm, FASTAPI, Vanilla JavaScript, HTML, CSS',
+    summary: 'Predicting Customer Churn using Machine Learning Algorithms',
   },
 ];
 
