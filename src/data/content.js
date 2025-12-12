@@ -29,35 +29,32 @@ export const topSocialLinks = [
 ];
 
 export const laptopProgrammingLanguages = [
-  { alt: 'HTML5', src: '/images/icon/800px-Devicon-html5-plain-wordmark.svg.png' },
-  { alt: 'CSS3', src: '/images/icon/CSS3_logo_and_wordmark.svg.png' },
   { alt: 'Javascript', src: '/images/icon/javascript.png' },
   { alt: 'Python', src: '/images/icon/python.png' },
-  { alt: 'C++', src: '/images/icon/c++.webp' },
   { alt: 'SQL', src: '/images/icon/sql.png' },
   { alt: 'Java', src: '/images/icon/java.png' },
+  { alt: 'HTML5', src: '/images/icon/800px-Devicon-html5-plain-wordmark.svg.png' },
+  { alt: 'CSS3', src: '/images/icon/CSS3_logo_and_wordmark.svg.png' },
 ];
 
 export const laptopTools = [
-  { alt: 'NodeJS', src: '/images/icon/node.png' },
+  { alt: 'Jupyter Notebook', src: '/images/icon/jupyter.png' },
+  { alt: 'pytorch', src: '/images/icon/pytorch.png' },
+  { alt: 'opencv', src: '/images/icon/Opencv.png' },
+  { alt: 'Numpy', src: '/images/icon/numpy.png' },
+  { alt: 'LLM', src: '/images/icon/chatGPT.png' },
   { alt: 'ReactJS', src: '/images/icon/react.png' },
+  { alt: 'Azure', src: '/images/icon/azure.png' },
   { alt: 'MongoDB', src: '/images/icon/mongodb.png' },
   { alt: 'MySQL', src: '/images/icon/mysql.webp' },
 ];
 
 export const mobileProgrammingLanguages = [
   ...laptopProgrammingLanguages,
-  { alt: 'Solidity', src: '/images/icon/solidity.png' },
-  { alt: 'Lua', src: '/images/icon/lua.png' },
 ];
 
 export const mobileTools = [
-  { alt: 'NodeJS', src: '/images/icon/node.png' },
-  { alt: 'ReactJS', src: '/images/icon/react.png' },
-  { alt: 'AngularJS', src: '/images/icon/angular.png' },
-  { alt: 'MongoDB', src: '/images/icon/mongodb.png' },
-  { alt: 'MySQL', src: '/images/icon/mysql.webp' },
-  { alt: 'AWS', src: '/images/icon/aws.png' },
+ ...laptopTools
 ];
 
 export const marqueeSkillsLeft = [
