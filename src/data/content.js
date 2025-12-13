@@ -17,7 +17,7 @@ export const heroContent = {
 };
 
 export const resumeContent = {
-  showDownload: true,
+  showDownload: false,
   eyebrow: 'Resume',
   heading: 'Download my latest resume',
   file: '/resume/nagesh-gupta-resume.pdf',
@@ -79,7 +79,7 @@ export const marqueeSkillsLeft = [
   'Python',
   'MySQL',
   'PostgreSQL',
-  'DOCKER',
+  'Docker',
 ];
 
 export const marqueeSkillsRight = [
@@ -149,7 +149,7 @@ export const experiencesPrimary = [
     date: 'July 2020 - March 2022',
     location: 'Pune , India',
     company: 'Lentra AI',
-    role: 'Software Engineer/ Data Analyst',
+    role: 'ML/Software Engineer',
     description: lentraDescription,
     techStack: 'Machine Learning, Data Analysis, Tesseract, OpenCV, Python, JavaScript, React, SQL, HTML, CSS, Git',
   },

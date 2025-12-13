@@ -17,7 +17,7 @@ const ContactSection = () => {
               Follow me on{' '}
               {contactLinks.map((link, idx) => (
                 <span key={link.label}>
-                  {idx === lastIndex && 'and '}
+                  {idx === lastIndex && ' and '}
                   <a href={link.href} title={link.title} target="_blank" rel="noopener" className="contact-w-arrow">
                     <mark>{` ${link.label}`}</mark>
                   </a>
